@@ -1,0 +1,169 @@
+/* ===== VARIABLES DE COLOR (si quieres cambiar el tema, solo toca aquí) ===== */
+:root {
+    --color-principal: #1f4e79;
+    --color-acento: #2e9e6b;
+    --color-fondo: #f4f6f8;
+    --color-tarjeta: #ffffff;
+    --color-texto: #2b2b2b;
+}
+
+/* ===== ESTILOS GENERALES ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+a {
+    color: var(--color-principal);
+}
+
+/* ===== CABECERA ===== */
+.cabecera {
+    background-color: var(--color-principal);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cabecera h1 {
+    margin: 0 0 10px;
+    font-size: 2.4rem;
+}
+
+.subtitulo {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.disponible {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 6px 16px;
+    background-color: var(--color-acento);
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* ===== MENÚ ===== */
+.menu {
+    position: sticky;      /* se queda fijo arriba al hacer scroll */
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    background-color: #163a5a;
+    padding: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: var(--color-acento);
+}
+
+/* ===== CONTENIDO ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 35px;
+    scroll-margin-top: 70px;   /* para que el menú no tape el título */
+}
+
+h2 {
+    color: var(--color-principal);
+    border-bottom: 3px solid var(--color-acento);
+    padding-bottom: 5px;
+}
+
+/* ===== TARJETAS ===== */
+.tarjeta {
+    background-color: var(--color-tarjeta);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+    color: var(--color-principal);
+}
+
+.detalle {
+    color: #666;
+    font-style: italic;
+}
+
+/* Cuadrícula de competencias: 3 columnas */
+.cuadricula {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.cuadricula .tarjeta {
+    margin-bottom: 0;
+}
+
+/* ===== HABILIDADES (etiquetas) ===== */
+.etiquetas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.etiquetas li {
+    background-color: var(--color-principal);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.95rem;
+}
+
+/* ===== CONTACTO ===== */
+.contacto {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto li {
+    margin-bottom: 8px;
+}
+
+/* ===== PIE DE PÁGINA ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-principal);
+    color: white;
+}
+
+/* ===== RESPONSIVE: pantallas pequeñas (móvil) ===== */
+@media (max-width: 700px) {
+    .cuadricula {
+        grid-template-columns: 1fr;   /* una sola columna */
+    }
+
+    .cabecera h1 {
+        font-size: 1.8rem;
+    }
+}
